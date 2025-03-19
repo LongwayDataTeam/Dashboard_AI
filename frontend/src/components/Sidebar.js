@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '../assets/sidebar.css';
 
-const Sidebar = ({ user, onLogout }) => {
+const Sidebar = ({ user, onLogout, isOpen }) => {
   const location = useLocation();
   const navigate = useNavigate();
   
@@ -32,7 +32,7 @@ const Sidebar = ({ user, onLogout }) => {
   };
 
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="sidebar-header">
         <h2>Dashboard AI</h2>
       </div>

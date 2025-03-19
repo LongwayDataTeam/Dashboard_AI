@@ -12,6 +12,7 @@ import './assets/app.css';
 const App = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     // Check if user is logged in
@@ -30,9 +31,13 @@ const App = () => {
     setUser(null);
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   // Protected route component
   const ProtectedRoute = ({ children }) => {
-    if (loading) return <div className="loading">Loading...</div>;
+    if (loading) return <div className="loading">Loading</div>;
     if (!user) return <Navigate to="/login" />;
     return children;
   };
@@ -40,7 +45,14 @@ const App = () => {
   return (
     <Router>
       <div className="app-container">
-        {user && <Sidebar user={user} onLogout={handleLogout} />}
+        {user && (
+          <>
+            <Sidebar user={user} onLogout={handleLogout} isOpen={menuOpen} />
+            <button className="menu-toggle" onClick={toggleMenu}>
+              {menuOpen ? '✕' : '☰'}
+            </button>
+          </>
+        )}
         
         <div className={user ? "content-container" : ""}>
           <Routes>
