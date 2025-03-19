@@ -43,7 +43,7 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <Router basename="/Dashboard_AI">
       <div className="app-container">
         {user && (
           <>
