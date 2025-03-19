@@ -1,0 +1,116 @@
+.page-container {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.grid-item {
+  min-height: 100px;
+}
+
+.chart-item {
+  grid-column: span 1;
+}
+
+.chart-box {
+  height: 300px;
+  position: relative;
+}
+
+/* For medium screens, show 2 KPI cards per row */
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For small screens, show 1 KPI card per row */
+@media (max-width: 768px) {
+  .page-container {
+    margin-left: 0;
+    width: 100%;
+    padding-top: 60px;
+  }
+  
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-item {
+    grid-column: span 1;
+  }
+}
+
+.role-indicator {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.role-indicator.admin {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border-left: 4px solid #1976d2;
+}
+
+.role-indicator.manager {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-left: 4px solid #2e7d32;
+}
+
+.role-indicator.analyst {
+  background-color: #f3e5f5;
+  color: #9c27b0;
+  border-left: 4px solid #9c27b0;
+}
+
+.admin-notes {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-notes h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.admin-notes ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.admin-notes li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.analyst-message {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+} 
