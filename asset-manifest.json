@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Dashboard_AI/static/css/main.ff34e74a.css",
+    "main.js": "/Dashboard_AI/static/js/main.b58d289f.js",
+    "index.html": "/Dashboard_AI/index.html",
+    "main.ff34e74a.css.map": "/Dashboard_AI/static/css/main.ff34e74a.css.map",
+    "main.b58d289f.js.map": "/Dashboard_AI/static/js/main.b58d289f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff34e74a.css",
+    "static/js/main.b58d289f.js"
+  ]
+}
